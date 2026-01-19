@@ -2,418 +2,404 @@
 <html lang="ko">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#0B1220" />
-    <title>MycoDx | TB/NTM Diagnostics</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>MycoDx | Tuberculosis & NTM Diagnostics</title>
     <meta
       name="description"
-      content="MycoDx는 결핵/비결핵항산균 진단을 위한 샘플 전처리 및 분자진단 솔루션을 개발합니다."
+      content="MycoDx는 결핵·NTM 진단을 위한 전처리/분자진단/내성 해석 워크플로우를 개발합니다."
     />
     <link rel="stylesheet" href="./style.css" />
   </head>
 
   <body>
-    <a class="skip-link" href="#main">본문으로 바로가기</a>
+    <a class="skip" href="#main">본문으로 바로가기</a>
 
-    <!-- Header -->
-    <header class="site-header" data-elevate>
-      <div class="container header-inner">
+    <!-- Header (sticky) -->
+    <header class="header" id="top">
+      <div class="container header__inner">
         <a class="brand" href="#top" aria-label="MycoDx 홈">
-          <!-- 로고가 있으면 아래 SVG 대신 이미지로 교체:
-          <img src="./assets/logo.svg" alt="MycoDx" height="28" />
-          -->
-          <svg
-            class="brand-mark"
-            width="28"
-            height="28"
-            viewBox="0 0 28 28"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            aria-hidden="true"
-          >
-            <path
-              d="M14 2.5c3.7 3.1 5.6 5.4 5.6 8.1 0 3-2.5 5.4-5.6 5.4S8.4 13.6 8.4 10.6C8.4 7.9 10.3 5.6 14 2.5Z"
-              class="mark-a"
-            />
-            <path
-              d="M6.2 14.3c3.9-.6 6.9-.4 9.1.7 2.6 1.2 3.7 4.1 2.5 6.7-1.2 2.6-4.2 3.7-6.7 2.5-2.3-1.1-3.8-3.7-4.9-9.9Z"
-              class="mark-b"
-            />
-          </svg>
-          <span class="brand-name">MycoDx</span>
-          <span class="brand-tag">Diagnostics</span>
+          <!-- 전체 로고(영문) -->
+          <img
+            class="brand__logo"
+            src="./assets/%EB%A1%9C%EA%B3%A0%204_%EB%B0%B0%EA%B2%BD%EC%A0%9C%EA%B1%B0.png"
+            alt="MycoDx"
+            loading="eager"
+          />
         </a>
 
-        <nav class="nav" aria-label="주요 메뉴">
-          <a href="#solutions">Solutions</a>
-          <a href="#technology">Technology</a>
-          <a href="#evidence">Evidence</a>
+        <nav class="nav" aria-label="메인 메뉴">
           <a href="#about">About</a>
-          <a href="#contact" class="btn btn-sm btn-primary">Contact</a>
+          <a href="#technology">Technology</a>
+          <a href="#pipeline">Pipeline</a>
+          <a href="#validation">Validation</a>
+          <a href="#collaboration">Collaboration</a>
+          <a class="btn btn--navy" href="#contact">Contact</a>
         </nav>
 
-        <button class="nav-toggle" aria-label="모바일 메뉴 열기" aria-expanded="false">
+        <button class="menuBtn" type="button" aria-label="모바일 메뉴 열기" aria-expanded="false">
           <span></span><span></span><span></span>
         </button>
       </div>
 
-      <!-- Mobile drawer -->
-      <div class="mobile-drawer" hidden>
-        <div class="container mobile-links">
-          <a href="#solutions">Solutions</a>
-          <a href="#technology">Technology</a>
-          <a href="#evidence">Evidence</a>
+      <!-- Mobile menu -->
+      <div class="mnav" hidden>
+        <div class="container mnav__inner">
           <a href="#about">About</a>
-          <a href="#contact" class="btn btn-primary">Contact</a>
+          <a href="#technology">Technology</a>
+          <a href="#pipeline">Pipeline</a>
+          <a href="#validation">Validation</a>
+          <a href="#collaboration">Collaboration</a>
+          <a class="btn btn--navy" href="#contact">Contact</a>
         </div>
       </div>
     </header>
 
     <main id="main">
       <!-- Hero -->
-      <section class="hero" id="top">
-        <div class="container hero-grid">
-          <div class="hero-copy">
-            <p class="eyebrow">Medical / Bio Diagnostics</p>
-            <h1>
-              더 빠르고 신뢰도 높은<br />
-              <span class="grad">결핵·NTM 진단</span>을 위한 샘플 전처리 & 분석
+      <section class="hero">
+        <div class="container grid12 hero__grid">
+          <div class="col hero__copy">
+            <p class="kicker">Tuberculosis · NTM · Diagnostics</p>
+            <h1 class="h1">
+              보이지 않는 결핵을,<br />
+              <span class="h1__accent">가장 정확하게 드러내다.</span>
             </h1>
             <p class="lead">
-              MycoDx는 임상 현장에서 사용 가능한 워크플로우를 목표로, 샘플 준비부터
-              분자진단/시퀀싱 기반 내성 해석까지 이어지는 통합 솔루션을 설계합니다.
+              “꽃 브랜드”가 아니라 <strong>결핵 진단 기술 기업</strong>입니다.
+              감성보다 <strong>정확성·신뢰·검증</strong>이 우선입니다.
             </p>
 
-            <div class="hero-cta">
-              <a class="btn btn-primary" href="#contact">데모/미팅 요청</a>
-              <a class="btn btn-ghost" href="#solutions">솔루션 보기</a>
+            <ul class="bullets" aria-label="핵심 가치">
+              <li>Clinical workflow-first sample preparation</li>
+              <li>Molecular detection & scalable platform design</li>
+              <li>Drug resistance analysis with report-ready outputs</li>
+            </ul>
+
+            <div class="hero__cta">
+              <a class="btn btn--navy" href="#contact">미팅 요청</a>
+              <a class="btn btn--ghost" href="#technology">기술 보기</a>
             </div>
 
-            <dl class="stats" aria-label="핵심 지표">
-              <div>
-                <dt>Workflow</dt>
-                <dd>현장 적용 중심</dd>
+            <div class="metrics" aria-label="요약 지표">
+              <div class="metric">
+                <div class="metric__k">Focus</div>
+                <div class="metric__v">TB · NTM</div>
               </div>
-              <div>
-                <dt>Focus</dt>
-                <dd>TB · NTM</dd>
+              <div class="metric">
+                <div class="metric__k">Output</div>
+                <div class="metric__v">Dx · DR Insight</div>
               </div>
-              <div>
-                <dt>Output</dt>
-                <dd>Diagnosis · Resistance</dd>
+              <div class="metric">
+                <div class="metric__k">Approach</div>
+                <div class="metric__v">Evidence-driven</div>
               </div>
-            </dl>
+            </div>
           </div>
 
-          <div class="hero-visual" aria-label="시각 요소">
-            <!-- Figma에서 내려받은 이미지를 여기에 넣어도 됩니다.
-                 예) <img src="./assets/hero.png" alt="제품/워크플로우 이미지" />
-            -->
-            <div class="glass-card">
-              <div class="glass-top">
-                <span class="pill">Sample</span>
-                <span class="pill">Prep</span>
-                <span class="pill">PCR/NGS</span>
-                <span class="pill">Interpretation</span>
+          <div class="col hero__viz" aria-label="비주얼">
+            <div class="vizCard">
+              <div class="vizCard__top">
+                <div class="chip">Camellia × Microscopy</div>
+                <div class="chip chip--muted">Data-ready</div>
               </div>
-              <div class="glass-body">
-                <div class="mini-grid">
-                  <div class="mini">
-                    <p class="mini-k">Capture</p>
-                    <p class="mini-v">Matrix-resistant</p>
-                  </div>
-                  <div class="mini">
-                    <p class="mini-k">Safety</p>
-                    <p class="mini-v">Workflow-ready</p>
-                  </div>
-                  <div class="mini">
-                    <p class="mini-k">Signal</p>
-                    <p class="mini-v">Low-burden</p>
-                  </div>
-                  <div class="mini">
-                    <p class="mini-k">DR</p>
-                    <p class="mini-v">Actionable</p>
-                  </div>
+
+              <div class="vizCard__body">
+                <!-- 동백 심볼 (꽃) -->
+                <div class="markWrap" aria-hidden="true">
+                  <img
+                    class="mark"
+                    src="./assets/%EB%A1%9C%EA%B3%A0%20%EC%B6%94%EC%B6%9C%28%EA%BD%83%29_%EB%B0%B0%EA%B2%BD%EC%A0%9C%EA%B1%B0.png"
+                    alt=""
+                    loading="lazy"
+                  />
+                  <div class="ring ring--1"></div>
+                  <div class="ring ring--2"></div>
+                  <div class="ring ring--3"></div>
                 </div>
 
-                <div class="spark-wrap" aria-hidden="true">
-                  <svg viewBox="0 0 300 110" class="spark">
-                    <path
-                      d="M5,70 C35,20 65,90 95,45 C125,5 155,85 185,52 C215,22 245,80 295,35"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2.5"
-                      stroke-linecap="round"
-                    />
-                  </svg>
-                  <div class="spark-caption">Consistent signal across conditions</div>
+                <!-- “데이터 자리” -->
+                <div class="mock">
+                  <div class="mock__title">Scientific signals (placeholder)</div>
+                  <div class="mock__chart" aria-hidden="true">
+                    <span style="height: 62%"></span>
+                    <span style="height: 38%"></span>
+                    <span style="height: 72%"></span>
+                    <span style="height: 48%"></span>
+                    <span style="height: 80%"></span>
+                    <span class="hi" style="height: 92%"></span>
+                  </div>
+                  <div class="mock__note">핵심 결과는 Red로 “소량” 강조</div>
                 </div>
               </div>
-            </div>
 
-            <div class="hero-badge">
-              <span class="dot"></span>
-              Clinical-minded engineering for mycobacteria
+              <div class="vizCard__foot">
+                <div class="dot"></div>
+                End-to-end workflow designed for real clinical constraints
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- Solutions -->
-      <section class="section" id="solutions">
+      <!-- About / Camellia Story -->
+      <section class="section section--gray" id="about">
         <div class="container">
-          <div class="section-head">
-            <h2>Solutions</h2>
-            <p>진단을 “현장에서 돌아가게” 만드는 구성요소에 집중합니다.</p>
+          <div class="sectionHead">
+            <h2 class="h2">About / Camellia Story</h2>
+            <div class="divider"></div>
           </div>
 
-          <div class="cards">
-            <article class="card">
-              <div class="icon" aria-hidden="true">🧪</div>
-              <h3>Sample Preparation</h3>
-              <p>
-                점도가 높은 임상 검체에서도 일관된 처리/회수 흐름을 목표로 전처리
-                프로세스를 설계합니다.
+          <div class="container grid12 about__grid">
+            <div class="col span7">
+              <p class="p">
+                MycoDx는 결핵균의 구조적 특성과 임상 검체의 변동성을 전제로,
+                “검사실에서 돌아가는 형태”의 진단 워크플로우를 설계합니다.
               </p>
-              <ul class="bullets">
-                <li>matrix 영향 최소화</li>
-                <li>간단한 단계 수</li>
-                <li>자동화/키트화 고려</li>
-              </ul>
-            </article>
+              <p class="p muted">
+                동백 심볼은 브랜드 장식이 아니라, <strong>표적(원형)·관찰(마이크로스코피)·데이터(점)</strong>를
+                상징하는 시각 언어로 제한적으로 사용합니다. Red는 대면적 사용을 피하고
+                <strong>핵심 포인트</strong>에만 적용합니다.
+              </p>
 
-            <article class="card">
-              <div class="icon" aria-hidden="true">🧬</div>
-              <h3>Molecular Readout</h3>
-              <p>
-                qPCR/amplicon 기반 분석에 적합한 출력 품질을 지향합니다.
-              </p>
-              <ul class="bullets">
-                <li>low-burden 대응</li>
-                <li>오염·억제 요인 관리</li>
-                <li>패널 확장성</li>
-              </ul>
-            </article>
+              <div class="note">
+                <strong>Design rule</strong>
+                <span>White/Navy 기반, Red는 “점/강조” 용도로만 사용</span>
+              </div>
+            </div>
 
-            <article class="card">
-              <div class="icon" aria-hidden="true">📊</div>
-              <h3>Drug Resistance Insight</h3>
-              <p>
-                변이 결과를 임상 의사결정에 연결하기 위한 해석/리포팅 레이어를 구축합니다.
-              </p>
-              <ul class="bullets">
-                <li>표준화된 변이 표기</li>
-                <li>패널/약제 매핑</li>
-                <li>리포트 자동화</li>
-              </ul>
-            </article>
+            <div class="col span5 about__symbol">
+              <div class="symbolCard">
+                <img
+                  class="symbol"
+                  src="./assets/%EB%A1%9C%EA%B3%A0%20%EC%B6%94%EC%B6%9C%28%EA%BD%83%29_%EB%B0%B0%EA%B2%BD%EC%A0%9C%EA%B1%B0.png"
+                  alt="MycoDx Camellia symbol"
+                  loading="lazy"
+                />
+                <p class="small muted">Camellia symbol (focus dots only)</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       <!-- Technology -->
-      <section class="section section-alt" id="technology">
-        <div class="container two-col">
-          <div>
-            <h2>Technology</h2>
-            <p class="muted">
-              아래는 Figma 기반 랜딩페이지용 “구조” 예시입니다. 실제 기술 요소/도식은
-              내려받은 에셋(이미지/SVG)로 교체해 넣으면 바로 완성됩니다.
-            </p>
-
-            <div class="feature-list">
-              <div class="feature">
-                <h3>Workflow-first Design</h3>
-                <p>임상 현장 제약(시간·안전·장비)을 전제로 설계합니다.</p>
-              </div>
-              <div class="feature">
-                <h3>Robust to Sample Variability</h3>
-                <p>검체 편차를 흡수하는 안정적인 처리 흐름을 지향합니다.</p>
-              </div>
-              <div class="feature">
-                <h3>Integration Ready</h3>
-                <p>키트/카트리지/자동화 장비로 이어질 수 있게 모듈화합니다.</p>
-              </div>
-            </div>
-
-            <div class="callout">
-              <strong>Tip</strong>
-              <span>
-                Figma에서 내보낸 SVG 아이콘/도식은 <code>assets/</code>에 넣고,
-                <code>&lt;img src="./assets/xxx.svg"&gt;</code>로 연결하세요.
-              </span>
-            </div>
-          </div>
-
-          <div class="panel">
-            <div class="panel-header">
-              <span class="panel-title">End-to-end Pipeline</span>
-              <span class="panel-sub">Sample → Signal → Report</span>
-            </div>
-
-            <ol class="steps" aria-label="파이프라인 단계">
-              <li><span class="step-n">1</span><span>Collection & Inactivation</span></li>
-              <li><span class="step-n">2</span><span>Pre-treatment / Liquefaction</span></li>
-              <li><span class="step-n">3</span><span>Target Enrichment / Capture</span></li>
-              <li><span class="step-n">4</span><span>Amplification / Sequencing</span></li>
-              <li><span class="step-n">5</span><span>Variant Interpretation</span></li>
-              <li><span class="step-n">6</span><span>Clinical Report</span></li>
-            </ol>
-
-            <div class="panel-foot">
-              <span class="tag">TB</span>
-              <span class="tag">NTM</span>
-              <span class="tag">DR</span>
-              <span class="tag">Automation</span>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Evidence / Trust -->
-      <section class="section" id="evidence">
+      <section class="section" id="technology">
         <div class="container">
-          <div class="section-head">
-            <h2>Evidence & Trust</h2>
-            <p>
-              규제/임상 적용을 위해 문서화와 검증 가능한 형태의 결과 제시를 중요하게 봅니다.
-            </p>
+          <div class="sectionHead">
+            <h2 class="h2">Technology</h2>
+            <div class="divider"></div>
           </div>
 
-          <div class="grid-3">
-            <div class="tile">
-              <h3>Documentation</h3>
-              <p class="muted">SOP · QC · Traceability 중심의 운영체계</p>
-            </div>
-            <div class="tile">
-              <h3>Clinical Collaboration</h3>
-              <p class="muted">현장 요구사항 기반의 반복 개선</p>
-            </div>
-            <div class="tile">
-              <h3>Data Integrity</h3>
-              <p class="muted">일관된 결과 재현성과 리포트 자동화</p>
-            </div>
-          </div>
+          <div class="cards3">
+            <article class="card">
+              <div class="icon" aria-hidden="true">▦</div>
+              <h3 class="h3">Molecular Detection</h3>
+              <p class="p muted">
+                qPCR/amplicon 기반 분석에 적합한 출력 품질을 목표로 전처리-검출 연결을 설계합니다.
+              </p>
+              <ul class="list">
+                <li>Navy 단색 아이콘/레이블</li>
+                <li>간결한 단계 수</li>
+                <li>확장 가능한 패널</li>
+              </ul>
+            </article>
 
-          <div class="disclaimer" role="note">
-            <p>
-              ※ 본 페이지는 소개 목적의 예시 텍스트를 포함합니다. 실제 성능 수치/주장(민감한
-              임상적 효능, 민감도/특이도 등)을 넣을 경우, 반드시 근거자료(논문/보고서/시험성적서)를
-              연결해 주세요.
-            </p>
+            <article class="card">
+              <div class="icon" aria-hidden="true">≋</div>
+              <h3 class="h3">Drug Resistance Analysis</h3>
+              <p class="p muted">
+                변이/내성 정보를 임상 의사결정에 연결하기 위한 해석 및 리포트 구조를 구성합니다.
+              </p>
+              <ul class="list">
+                <li>표준화된 변이 표기</li>
+                <li>약제-유전자 매핑</li>
+                <li>리포트 자동화</li>
+              </ul>
+            </article>
+
+            <article class="card">
+              <div class="icon" aria-hidden="true">⤢</div>
+              <h3 class="h3">Platform Scalability</h3>
+              <p class="p muted">
+                키트/카트리지/자동화 장비로 이어질 수 있도록 구성요소를 모듈화합니다.
+              </p>
+              <ul class="list">
+                <li>워크플로우 호환성</li>
+                <li>재현성 중심</li>
+                <li>검증 가능한 산출물</li>
+              </ul>
+            </article>
           </div>
         </div>
       </section>
 
-      <!-- About -->
-      <section class="section section-alt" id="about">
-        <div class="container two-col">
-          <div>
-            <h2>About MycoDx</h2>
-            <p class="muted">
-              마이코박테리아 진단의 병목은 단일 기술이 아니라 “전체 워크플로우”에 걸쳐
-              존재합니다. MycoDx는 공학적 관점으로 이 병목을 줄이는 제품화 가능한 해법을
-              만듭니다.
-            </p>
+      <!-- Pipeline & Applications -->
+      <section class="section" id="pipeline">
+        <div class="container">
+          <div class="sectionHead">
+            <h2 class="h2">Pipeline & Applications</h2>
+            <div class="divider"></div>
+          </div>
 
-            <div class="quote">
-              <p>
-                “From sample to actionable report — designed for real clinical workflows.”
+          <div class="timeline">
+            <div class="step">
+              <div class="step__dot" aria-hidden="true"></div>
+              <div class="step__box">
+                <div class="step__k">Research</div>
+                <div class="step__v">Concept & feasibility</div>
+              </div>
+            </div>
+
+            <div class="step">
+              <div class="step__line" aria-hidden="true"></div>
+              <div class="step__dot" aria-hidden="true"></div>
+              <div class="step__box">
+                <div class="step__k">Clinical Validation</div>
+                <div class="step__v">Workflow verification & QC</div>
+              </div>
+            </div>
+
+            <div class="step">
+              <div class="step__line" aria-hidden="true"></div>
+              <div class="step__dot" aria-hidden="true"></div>
+              <div class="step__box">
+                <div class="step__k">Application / Deployment</div>
+                <div class="step__v">Kit · platform · partnership</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="apps">
+            <div class="app">
+              <div class="app__t">Use case</div>
+              <div class="app__d">Low-burden sample support</div>
+            </div>
+            <div class="app">
+              <div class="app__t">Use case</div>
+              <div class="app__d">Rapid triage & follow-up testing</div>
+            </div>
+            <div class="app">
+              <div class="app__t">Use case</div>
+              <div class="app__d">Drug resistance insight workflow</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Scientific Validation -->
+      <section class="section section--white" id="validation">
+        <div class="container">
+          <div class="sectionHead">
+            <h2 class="h2">Scientific Validation</h2>
+            <div class="divider"></div>
+          </div>
+
+          <div class="container grid12 val__grid">
+            <div class="col span7">
+              <h3 class="h3">Evidence-based statements</h3>
+              <p class="p muted">
+                실제 성능 수치(민감도/특이도, LOD 등)는 검증자료가 준비되면 이 영역에
+                인용/도표와 함께 배치합니다. (지금은 “데이터가 들어갈 자리”를 명확히 보여주는 구성)
               </p>
-              <span>— MycoDx</span>
+
+              <ul class="list">
+                <li>검체 변동성에 대한 강건성 평가(placeholder)</li>
+                <li>재현성/정밀도(placeholder)</li>
+                <li>DR 해석 결과의 리포트화(placeholder)</li>
+              </ul>
             </div>
+
+            <div class="col span5">
+              <div class="chartCard" aria-label="데이터 시각화 목업">
+                <div class="chartCard__head">
+                  <div class="chartCard__title">Validation mock</div>
+                  <div class="chartCard__sub">Navy baseline / Red highlight</div>
+                </div>
+                <div class="dotplot" aria-hidden="true">
+                  <div class="dotplot__row">
+                    <span class="dot"></span><span class="dot"></span><span class="dot hi"></span
+                    ><span class="dot"></span><span class="dot"></span>
+                  </div>
+                  <div class="dotplot__row">
+                    <span class="dot"></span><span class="dot"></span><span class="dot"></span
+                    ><span class="dot"></span><span class="dot"></span>
+                  </div>
+                  <div class="dotplot__row">
+                    <span class="dot"></span><span class="dot hi"></span><span class="dot"></span
+                    ><span class="dot"></span><span class="dot"></span>
+                  </div>
+                </div>
+                <div class="chartCard__foot muted">* Actual data will be inserted here.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Collaboration -->
+      <section class="section section--navy" id="collaboration">
+        <div class="container collab">
+          <h2 class="h2 h2--invert">Collaboration</h2>
+          <p class="p collab__p">
+            임상/연구 파트너와 함께 실제 워크플로우에서 검증 가능한 결과를 쌓아갑니다.
+          </p>
+
+          <div class="pillRow" aria-label="협력 대상">
+            <span class="pill">Hospitals</span>
+            <span class="pill">Reference labs</span>
+            <span class="pill">Research institutes</span>
+            <span class="pill">Industry partners</span>
           </div>
 
-          <div class="team card">
-            <h3>Contact Points</h3>
-            <div class="team-row">
-              <div class="avatar" aria-hidden="true">MD</div>
-              <div>
-                <p class="t-name">Business / Partnership</p>
-                <p class="t-meta muted">Email · Meetings · Collaboration</p>
-              </div>
-            </div>
-            <div class="team-row">
-              <div class="avatar" aria-hidden="true">RD</div>
-              <div>
-                <p class="t-name">R&amp;D / Clinical Study</p>
-                <p class="t-meta muted">Protocol · Validation · Data</p>
-              </div>
-            </div>
-            <div class="team-row">
-              <div class="avatar" aria-hidden="true">EN</div>
-              <div>
-                <p class="t-name">Engineering / Automation</p>
-                <p class="t-meta muted">Device · Workflow · Integration</p>
-              </div>
-            </div>
-          </div>
+          <a class="btn btn--white" href="#contact">파트너십 문의</a>
         </div>
       </section>
 
       <!-- Contact -->
       <section class="section" id="contact">
-        <div class="container contact">
-          <div class="contact-card">
-            <h2>Let’s talk</h2>
-            <p class="muted">
-              GitHub Pages 정적 사이트에서는 서버가 없으므로, 아래 폼은 기본적으로 메일 앱을
-              여는 방식(<code>mailto:</code>)으로 동작합니다.
-            </p>
+        <div class="container">
+          <div class="sectionHead">
+            <h2 class="h2">Contact</h2>
+            <div class="divider"></div>
+          </div>
+
+          <div class="contactCard">
+            <div class="contactCard__left">
+              <!-- 한글 포함 로고 -->
+              <img
+                class="contactLogo"
+                src="./assets/%EB%A1%9C%EA%B3%A0%20%EC%B6%94%EC%B6%9C%28%EC%9D%B4%EB%A6%84%29_%EB%B0%B0%EA%B2%BD%EC%A0%9C%EA%B1%B0.png"
+                alt="MycoDx 마이코디엑스"
+                loading="lazy"
+              />
+              <p class="p muted">
+                정적 사이트(GitHub Pages)에서는 서버 폼 전송이 불가하므로 아래 버튼은 메일 앱을 여는 방식으로 동작합니다.
+              </p>
+            </div>
 
             <form class="form" id="contactForm">
-              <div class="row">
-                <label>
-                  <span>이름</span>
-                  <input name="name" type="text" autocomplete="name" required />
-                </label>
-                <label>
-                  <span>이메일</span>
-                  <input name="email" type="email" autocomplete="email" required />
-                </label>
-              </div>
               <label>
+                <span>이름</span>
+                <input name="name" type="text" autocomplete="name" required />
+              </label>
+              <label>
+                <span>이메일</span>
+                <input name="email" type="email" autocomplete="email" required />
+              </label>
+              <label class="full">
                 <span>메시지</span>
                 <textarea name="message" rows="5" required></textarea>
               </label>
 
-              <div class="form-actions">
-                <button type="submit" class="btn btn-primary">메일로 보내기</button>
-                <a class="btn btn-ghost" href="mailto:contact@mycodx.com">직접 메일</a>
+              <div class="form__actions full">
+                <button class="btn btn--navy" type="submit">메일로 보내기</button>
+                <a class="btn btn--ghost" href="mailto:contact@mycodx.com">직접 메일</a>
               </div>
 
-              <p class="muted small">
-                * 수신 이메일 주소는 아래 스크립트에서 <code>contact@mycodx.com</code>을
-                원하는 주소로 바꾸세요.
+              <p class="small muted full">
+                * 수신 주소는 아래 스크립트의 <code>contact@mycodx.com</code>만 바꾸면 됩니다.
               </p>
             </form>
-          </div>
-
-          <div class="contact-side">
-            <div class="contact-box">
-              <h3>Company</h3>
-              <p class="muted">
-                주식회사 마이코디엑스<br />
-                (MycoDx Inc.)
-              </p>
-            </div>
-
-            <div class="contact-box">
-              <h3>Domains</h3>
-              <p class="muted">
-                mycodx.com<br />
-                GitHub Pages compatible
-              </p>
-            </div>
-
-            <div class="contact-box">
-              <h3>Materials</h3>
-              <p class="muted">
-                One-pager · Deck · Validation plan<br />
-                (PDF 링크로 교체 가능)
-              </p>
-              <a class="link" href="#" aria-disabled="true">자료 다운로드(예시)</a>
-            </div>
           </div>
         </div>
       </section>
@@ -421,70 +407,56 @@
 
     <!-- Footer -->
     <footer class="footer">
-      <div class="container footer-inner">
-        <div>
-          <div class="brand footer-brand">
-            <span class="brand-name">MycoDx</span>
-            <span class="brand-tag">Diagnostics</span>
-          </div>
-          <p class="muted small">
-            © <span id="year"></span> MycoDx. All rights reserved.
-          </p>
+      <div class="container footer__inner">
+        <div class="footer__left">
+          <img
+            class="footerLogo"
+            src="./assets/%EB%A1%9C%EA%B3%A0%204_%EB%B0%B0%EA%B2%BD%EC%A0%9C%EA%B1%B0.png"
+            alt="MycoDx"
+            loading="lazy"
+          />
+          <div class="small muted">© <span id="year"></span> MycoDx. All rights reserved.</div>
         </div>
-
-        <div class="footer-links">
-          <a href="#solutions">Solutions</a>
-          <a href="#technology">Technology</a>
+        <div class="footer__right">
           <a href="#about">About</a>
+          <a href="#technology">Technology</a>
+          <a href="#pipeline">Pipeline</a>
+          <a href="#validation">Validation</a>
           <a href="#contact">Contact</a>
         </div>
       </div>
     </footer>
 
     <script>
-      // Mobile nav
-      const toggle = document.querySelector(".nav-toggle");
-      const drawer = document.querySelector(".mobile-drawer");
-      const header = document.querySelector("[data-elevate]");
-      const navLinks = drawer?.querySelectorAll("a") || [];
+      // Mobile menu
+      const btn = document.querySelector(".menuBtn");
+      const mnav = document.querySelector(".mnav");
+      const links = mnav ? mnav.querySelectorAll("a") : [];
 
-      function setDrawer(open) {
-        toggle.setAttribute("aria-expanded", String(open));
-        drawer.hidden = !open;
-        document.body.classList.toggle("no-scroll", open);
+      function setOpen(open) {
+        btn.setAttribute("aria-expanded", String(open));
+        mnav.hidden = !open;
+        document.body.classList.toggle("noScroll", open);
       }
 
-      toggle?.addEventListener("click", () => {
-        const open = toggle.getAttribute("aria-expanded") === "true";
-        setDrawer(!open);
+      btn?.addEventListener("click", () => {
+        const open = btn.getAttribute("aria-expanded") === "true";
+        setOpen(!open);
       });
 
-      navLinks.forEach((a) =>
-        a.addEventListener("click", () => {
-          setDrawer(false);
-        })
-      );
+      links.forEach((a) => a.addEventListener("click", () => setOpen(false)));
 
-      // Header elevate on scroll
-      window.addEventListener("scroll", () => {
-        header.classList.toggle("is-scrolled", window.scrollY > 8);
-      });
-
-      // Contact: mailto submit (works on GitHub Pages)
-      const form = document.getElementById("contactForm");
-      form?.addEventListener("submit", (e) => {
+      // Contact mailto (static friendly)
+      document.getElementById("contactForm")?.addEventListener("submit", (e) => {
         e.preventDefault();
-        const fd = new FormData(form);
-        const name = (fd.get("name") || "").toString().trim();
-        const email = (fd.get("email") || "").toString().trim();
-        const message = (fd.get("message") || "").toString().trim();
+        const fd = new FormData(e.target);
+        const name = String(fd.get("name") || "").trim();
+        const email = String(fd.get("email") || "").trim();
+        const message = String(fd.get("message") || "").trim();
 
-        const to = "contact@mycodx.com"; // <- 여기만 바꾸면 됩니다
+        const to = "contact@mycodx.com"; // <- 여기만 바꾸세요
         const subject = encodeURIComponent(`[MycoDx 문의] ${name}`);
-        const body = encodeURIComponent(
-          `이름: ${name}\n이메일: ${email}\n\n메시지:\n${message}\n`
-        );
-
+        const body = encodeURIComponent(`이름: ${name}\n이메일: ${email}\n\n메시지:\n${message}\n`);
         window.location.href = `mailto:${to}?subject=${subject}&body=${body}`;
       });
 
